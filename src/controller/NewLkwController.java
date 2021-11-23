@@ -1,5 +1,6 @@
 package controller;
 
+import model.LKW;
 import view.NewLkwWindow;
 
 public class NewLkwController {
@@ -8,8 +9,18 @@ public class NewLkwController {
     MainController _mc;
 
     public NewLkwController(MainController mc){
+        setNewLkwWindow(new NewLkwWindow(this));
         setMainController(mc);
     }
+
+    public void addNewLKW(String marke, String ps, String typ, String maxzuladung) {
+        // Neues Objekt vom Typ LKW erstellen und dieses dem Maincontroller mitgeben
+        LKW a = new LKW(marke, Integer.parseInt(ps), typ, Integer.parseInt(maxzuladung));
+        getMainController().addNewFahrzeug(a);
+        // Nachdem der LKW erstellt wurde kümmert sich der Controller um den Wechsel der Ansicht.
+        getMainController().changeView("mainwindow");
+    }
+    
     
     /**
      * 

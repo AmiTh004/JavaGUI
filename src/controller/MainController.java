@@ -2,7 +2,6 @@ package controller;
 
 import java.util.ArrayList;
 
-import model.Auto;
 import model.Fahrzeug;
 import view.MainWindow;
 
@@ -28,13 +27,16 @@ public class MainController {
         if(target == "newcarwindow"){
             new NewCarController(this);
         }
+        else if(target == "newlkwwindow"){
+            new NewLkwController(this);
+        }
         else if(target == "mainwindow"){
             getMainWindow().getMainFrame().setVisible(true);
             getMainWindow().updateTable();
         }
     }
 
-    public void addNewCar(Auto a){
+    public void addNewFahrzeug(Fahrzeug a){
         getFahrzeuge().add(a);
         System.out.println("Neues Auto erstellt!");
     }
