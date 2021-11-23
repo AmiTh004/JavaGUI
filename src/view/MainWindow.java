@@ -9,6 +9,7 @@ import controller.MainController;
 import model.Auto;
 import model.Fahrzeug;
 import model.LKW;
+import model.Motorad;
 
 public class MainWindow {
     
@@ -17,6 +18,7 @@ public class MainWindow {
     JTable _carTable;
     JButton _createCar;
     JButton _createLKW;
+    JButton _createMotorad;
 
     MainController _mc;
 
@@ -47,6 +49,10 @@ public class MainWindow {
         _createLKW.setBounds(0,0,0,0);
         _createLKW.addActionListener(new createFahrzeugListener());
 
+        _createMotorad = new JButton("Neues Motorad");
+        _createMotorad.setBounds(0,0,0,0);
+        _createMotorad.addActionListener(new createFahrzeugListener());
+
         DefaultTableModel model = new DefaultTableModel(); 
         setCarTable(new JTable(model));
 
@@ -59,6 +65,7 @@ public class MainWindow {
         getMainPanel().add(getCarTable());
         getMainPanel().add(_createCar);
         getMainPanel().add(_createLKW);
+        getMainPanel().add(_createMotorad);
         getMainFrame().add(getMainPanel());
     }
 
@@ -79,6 +86,10 @@ public class MainWindow {
             else if(a instanceof LKW){
                 LKW a_temp = (LKW) a;
                 model.addRow(new Object[]{a_temp.getMarke(), a_temp.getPs(), a_temp.getTyp(), a_temp.getMaxZuladung()});
+            }
+            else if(a instanceof Motorad){
+                Motorad a_temp = (Motorad) a;
+                model.addRow(new Object[]{a_temp.getMarke(), a_temp.getPs(), a_temp.getTyp()});
             }
         }
     }
@@ -106,6 +117,10 @@ public class MainWindow {
             else if(e.getSource() == _createLKW){
                 System.out.println("LKW erstellen - wechsle Ansicht zu newLKWWindow");
                 getMainController().changeView("newlkwwindow");
+            }
+            else if(e.getSource() == _createMotorad){
+                System.out.println("Motorad erstellen - wechsle Ansicht zu newMotoradWindow");
+                getMainController().changeView("newmotoradwindow");
             }
         }
     }

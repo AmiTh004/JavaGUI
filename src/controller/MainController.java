@@ -30,6 +30,9 @@ public class MainController {
         else if(target == "newlkwwindow"){
             new NewLkwController(this);
         }
+        else if(target == "newmotoradwindow"){
+            new NewMotoradController(this);
+        }
         else if(target == "mainwindow"){
             getMainWindow().getMainFrame().setVisible(true);
             getMainWindow().updateTable();
