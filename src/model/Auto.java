@@ -18,7 +18,16 @@ public class Auto extends Fahrzeug {
         return _sitze;
     }
 
+<<<<<<< Updated upstream
     public void setSitze(int sitze) {
         this._sitze = sitze;
     }
+=======
+    @Override
+    public String getSpezial() {
+        // TODO Auto-generated method stub
+        return ""+_sitze;
+    }
+
+>>>>>>> Stashed changes
 }

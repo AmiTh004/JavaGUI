@@ -8,8 +8,11 @@ import javax.swing.table.DefaultTableModel;
 import controller.MainController;
 import model.Auto;
 import model.Fahrzeug;
+<<<<<<< Updated upstream
 import model.LKW;
 import model.Motorad;
+=======
+>>>>>>> Stashed changes
 
 public class MainWindow {
     
@@ -78,6 +81,7 @@ public class MainWindow {
             model.removeRow(i);
         }
 
+<<<<<<< Updated upstream
         for(Fahrzeug a : getMainController().getFahrzeuge()){
             if(a instanceof Auto){
                 Auto a_temp = (Auto) a;
@@ -91,6 +95,11 @@ public class MainWindow {
                 Motorad a_temp = (Motorad) a;
                 model.addRow(new Object[]{a_temp.getMarke(), a_temp.getPs(), a_temp.getTyp()});
             }
+=======
+        //Alle noch vorhandenen Elemente wieder eingeben
+        for(Fahrzeug a : getMainController().getFahrzeuge()){
+            model.addRow(new Object[]{a.getMarke(), a.getPs(), a.getTyp(), a.getSpezial()});
+>>>>>>> Stashed changes
         }
     }
 
