@@ -6,5 +6,11 @@ public class Motorad extends Fahrzeug{
         super(marke, ps, typ);
         //TODO Auto-generated constructor stub
     }
+
+    @Override
+    public String getSpezial() {
+        // TODO Auto-generated method stub
+        return null;
+    }
     
 }

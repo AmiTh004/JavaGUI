@@ -1,11 +1,8 @@
 package model;
 
-<<<<<<< Updated upstream
-public class Fahrzeug {
-    
-=======
+
 public abstract class Fahrzeug {
->>>>>>> Stashed changes
+
     String _marke;
     int _ps;
     String _typ;

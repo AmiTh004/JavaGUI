@@ -1,6 +1,6 @@
 package controller;
 
-import model.Motorad;
+import model.*;
 import view.NewMotoradWindow;
 
 public class NewMotoradController {

@@ -12,7 +12,7 @@ public class LKW extends Fahrzeug {
     @Override
     public String getSpezial() {
         // TODO Auto-generated method stub
-        return "" + _last;
+        return "" + _maxZuladung;
     }
 
     /**
@@ -23,15 +23,7 @@ public class LKW extends Fahrzeug {
         return _maxZuladung;
     }
 
-<<<<<<< Updated upstream
     public void setMaxZuladung(int maxZuladung) {
         this._maxZuladung = maxZuladung;
     }
-=======
-     public int getLast() {
-         return _last;
-     }
-
-    
->>>>>>> Stashed changes
 }

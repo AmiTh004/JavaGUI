@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import model.Fahrzeug;
 import view.MainWindow;
+import controller.NewLkwController;
+import controller.NewMotoradController;
 
 public class MainController {
 
